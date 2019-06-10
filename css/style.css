@@ -1,0 +1,312 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.textLink {
+	padding: 2px 8px 2px 20px;
+	background: #999 url('../assets/img/ui/arrowRight.png') 7px 50% no-repeat;
+	background-size: 7.5px 12.5px;
+	color: #fff;
+	border-bottom: 2px solid #666;
+}
+.textLink:hover {
+	background-color: #bbb;
+	border-bottom-color: #888;
+}
+
+#page {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	padding: 8px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.nameSection {
+	grid-column: 1;
+	color: #333;
+}
+.nameSection:hover {
+	color: #666;
+}
+.nameSection h1 {
+	margin: 0;
+	font-size: 22px;
+}
+.nameSection .role {
+	font-size: 14px;
+}
+
+
+.headerLinks {
+	grid-column: 2;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+header .dropdown {
+	grid-column: 3;
+}
+
+footer {
+	text-align: center;
+	padding: 30px 0;
+}
+
+
+#items::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#items .item {
+	position: relative;
+	background: #eee;
+	font-size: 4vw;
+}
+
+#items .item .illus {
+	display: block;
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+}
+
+#items .item .details {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,1) 100%);
+
+	/*opacity: 0;*/
+	transition: opacity 0.2s ease-in-out;
+}
+
+#items .item:hover .details {
+	/*opacity: 1;*/
+}
+
+#items .item .content {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	width: 90%;
+}
+
+#items .item .infos::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#items .item h2 {
+	margin: 0;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+}
+#items .item h3 {
+	margin: 0;
+	font-weight: normal;
+}
+
+#items .item p {
+	margin: 10px 0;
+}
+
+#items .item a {
+	float: left;
+	display: inline-block;
+	padding: 2px 8px 2px 20px;
+	background: #f60 url('../assets/img/ui/arrowRight.png') 7px 50% no-repeat;
+	background-size: 7.5px 12.5px;
+	color: #fff;
+}
+
+#items .item a:hover {
+	background-color: #f93;
+}
+
+#items .tags {
+	float: right;
+}
+#items .tag {
+	display: inline-block;
+	padding: 2px 6px;
+	background-color: #666;
+	border-radius: 20px;
+	color: #fff;
+}
+#items .tag.vuejs {
+	background-color: #4fc08d;
+}
+#items .tag.pixijs {
+	background-color: #e91e63;
+}
+
+.about {
+	padding: 8px;
+	font-size: 14px;
+	border-top: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+}
+
+.sidebar ul {
+	padding-left: 16px;
+}
+
+.contactBlock {
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	padding: 5px 15px;
+	border: 1px solid #e5e5e5;
+}
+
+.contactLink {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.contactLink a {
+	display: inline-block;
+	background: url('../assets/img/ui/email.png') 0 40% no-repeat;
+	background-size: 16px 16px;
+	color: #267CB9;
+	padding-left: 22px;
+}
+.contactLink a:hover {
+	color: #56ACE9;
+}
+
+.contactLink.email a {
+	background-image: url('../assets/img/ui/email.png');
+}
+.contactLink.phone a {
+	background-image: url('../assets/img/ui/phone.png');
+}
+.contactLink.twitter a {
+	background-image: url('../assets/img/ui/twitter.png');
+}
+
+.career h2 {
+	font-weight: bold;
+	font-size: 18px;
+	margin: 10px 0 0 0;
+}
+.career h3 {
+	font-weight: bold;
+	font-size: 16px;
+	margin: 20px 0 0 0;
+	padding-left: 22px;
+}
+.career .period {
+	color: #999;
+	font-weight: normal;
+	font-size: 14px;
+	margin-top: 5px;	
+}
+.career .work {
+	background: url('../assets/img/ui/work.png') 0 2px no-repeat;
+	background-size: 16px 16px;
+}
+.career .school {
+	background: url('../assets/img/ui/school.png') 0 2px no-repeat;
+	background-size: 16px 16px;
+}
+.career p {
+	font-weight: normal;
+	font-size: 14px;
+	color: #666;
+	margin: 10px 0 0 0;
+}
+.career .link {
+	color: #267CB9;
+	font-weight: bold;
+}
+.career .link:hover {
+	color: #56ACE9;
+}
+
+/* dropdown */
+.dropdown {
+	width: auto;
+	position: relative;
+}
+.dropdown .button {
+	height: 20px;
+	width: 100%;
+	background: #ccc url('../assets/img/ui/arrowRight.png') calc(100% - 10px) 50% no-repeat;
+	background-size: 7.5px 12.5px;
+}
+.dropdown .wrapper {
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 100%;
+}
+.dropdown a {
+	display: block;
+	background-color: #eee;
+}
+
+@media (min-width: 480px) {
+	.nameSection h1 {
+		font-size: 26px;
+	}
+	.nameSection .role {
+		font-size: 18px;
+	}
+	#items .item {
+		float: left;
+		width: 50%;
+		font-size: 2vw;
+	}
+}
+@media (min-width: 800px) { 
+	#items .item {
+		width: 33.33%;
+		font-size: 1.5vw;
+	}
+	.about {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-column-gap: 16px;
+	}
+	.about .sidebar {
+		grid-column: 1;
+	}
+	.about .career {
+		grid-column: 2;
+	}
+}
+@media (min-width: 1200px) { 
+	#items .item {
+		width: 25%;
+		font-size: 16px;
+	}
+}
+
+@media (hover) {
+	#items .item .details {
+		opacity: 0;
+	}
+	#items .item:hover .details {
+		opacity: 1;
+	}
+}
